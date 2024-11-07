@@ -9,6 +9,7 @@ modules:
   requires:
   - name: incident-management-db
   - name: incident-management-auth
+  - name: incident-management-destination-service
   provides:
   - name: srv-api
     properties:
@@ -127,6 +128,14 @@ resources:
     service-plan: lite
   requires:
   - name: srv-api
+- name: S4HC_Dev_EXT
+  type: org.cloudfoundry.managed-service  
+  parameters:
+    path: ./bupa.json
+    service: s4-hana-cloud
+    service-plan: api-access
+    system-name: S4HC_DEV
+
 parameters:
   deploy_mode: html5-repo
   enable-parallel-deployments: true
