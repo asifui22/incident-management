@@ -22,6 +22,7 @@ mta_archives/
 resources/
 dist/
 app/*/package-lock.json
+.vscode/settings.json
 
 # Other
 .DS_Store
